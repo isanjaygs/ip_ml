@@ -39,7 +39,7 @@ for feature in x.columns:
     if min_val == 0 and max_val == 1:
         value = st.slider(f"{feature} (Choose 0 or 1)", 0, 1, 0)
     else:
-        value = st.slider(f"{feature} (Min: {min_val}, Max: {max_val})", float(min_val), float(max_val), float(max_val) if min_val == max_val else float(min_val))
+        value = st.slider(f"{feature} (Min: {min_val}, Max: {max_val})", int(min_val), int(max_val), int(max_val) if min_val == max_val else int(min_val))
     new_phone.append(value)
 
 if st.button("Predict Price"):
